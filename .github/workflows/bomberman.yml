@@ -1,4 +1,4 @@
-name: Generate Bomberman
+name: Generate Bomberman Animation
 
 on:
   # Se ejecuta automáticamente cada 24 horas
@@ -15,15 +15,17 @@ jobs:
     timeout-minutes: 5
     
     steps:
-      - name: Generate github-contribution-cube-animation
-        uses: Platane/snk/svg-only@v3
+      # Genera los archivos SVG del juego Bomberman
+      - name: generate-bomberman-svg
+        uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/bomberman-contribution-graph.svg?game=bomberman
+            dist/bomberman-contribution-graph.svg?palette=github-light&game=bomberman
             dist/bomberman-contribution-graph-dark.svg?palette=github-dark&game=bomberman
           
-      - name: push github-contribution-cube-animation to the output branch
+      # Sube los archivos generados a la rama 'pacman-output'
+      - name: push-to-pacman-output-branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: pacman-output
