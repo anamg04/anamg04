@@ -81,9 +81,6 @@
 <div data-importer="stats" align="center">
   <img src="https://streak-stats.demolab.com?user=anamg04&locale=es&mode=daily&theme=buefy&hide_border=false&border_radius=5&order=3" height="170" alt="streak graph" />
 </div>
-<div data-importer="stats" align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anamg04&layout=compact&theme=buefy&hide_border=false" height="170" alt="languages graph" />
-</div>
 
 ###
 
